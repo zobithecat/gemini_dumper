@@ -28,6 +28,20 @@ python dump_playwright.py
 
 결과: `gemini-YYYYMMDD-HHMMSS.json` / `.md`
 
+## 변환 — JSON → Markdown / Text
+
+`dump_console.js`로 받은 JSON을 일반 텍스트나 마크다운으로 변환:
+
+```bash
+python3 convert.py gemini-2026-04-09T11-17-06-694Z.json              # md + txt 둘 다
+python3 convert.py gemini-2026-04-09T11-17-06-694Z.json --format md  # md만
+python3 convert.py gemini-2026-04-09T11-17-06-694Z.json --format txt # txt만
+```
+
+- `.md`: `## 🧑 User #N` / `## 🤖 Gemini #N` 섹션 헤더 + 본문
+- `.txt`: `====` 구분선 + `[NNNN] USER/GEMINI` 헤더
+- Gemini UI의 "말씀하신 내용" 프리픽스 자동 제거
+
 ## 동작 원리
 
 - 컨테이너: `infinite-scroller.chat-history` (또는 `[data-test-id="chat-history-container"]`)
