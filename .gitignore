@@ -1,0 +1,18 @@
+# Backup data files (personal conversations)
+gemini-*.json
+gemini-*.md
+gemini-*.txt
+gemini-*.html
+sample.html
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# OS / Editor
+.DS_Store
+.idea/
+.vscode/
+.claude/
